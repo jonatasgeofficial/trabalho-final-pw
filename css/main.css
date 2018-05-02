@@ -1,0 +1,229 @@
+/*
+    1. Base Tags
+    2. Scrollbar
+    3. Themes
+    4. General
+    5. Pages
+ */
+
+/* 1. Base Tags */
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* NAVBAR */
+
+#navbar .brand-logo {
+    font-size: 22px !important;
+    padding: 0 20px !important;
+}
+
+#navbar .brand-logo i.material-icons {
+    font-size: 30px !important;
+}
+
+#navbar a.button-collapse {
+    display: block;
+}
+
+/* FOOTER */
+
+footer {
+    bottom: 0;
+    padding: 10px !important;
+    width: 100%;
+}
+
+/* 2. Scrollbar */
+
+/* 3. Themes */
+
+.theme-color-1 {
+    color: white;
+    background-color: #f57c00;
+}
+
+.theme-color-1-text {
+    color: #f57c00 !important;
+}
+
+a.theme-color-1:hover,
+button.theme-color-1:hover,
+input.theme-color-1:hover {
+    background-color: #ffa726;
+}
+
+.theme-color-2 {
+    background-color: #ffffff;
+}
+
+.theme-color-2-text {
+    color: #ffffff !important;
+}
+
+/* 4. General */
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.filter-black {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.margin-0 {
+    margin: 0 !important;
+}
+
+/* LOGO */
+
+.brand-logo span,
+.brand-logo i.material-icons {
+    float: left;
+}
+
+.brand-logo i.material-icons {
+    margin: 0 !important;
+}
+
+/* 5. Pages */
+
+/* PAGE: INDEX */
+
+#apresentacao {
+    background: url(../images/banner.jpg) center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
+#apresentacao>div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+#apresentacao>div>* {
+    margin: 0;
+    width: 100%;
+}
+
+#apresentacao h1 {
+    font-size: 32px;
+}
+
+#apresentacao h2,
+#apresentacao h2 * {
+    font-size: 100px;
+}
+
+#apresentacao h2 {
+    margin-left: -15px;
+    width: auto;
+}
+
+@media only screen and (max-width: 600px) {}
+
+@media only screen and (max-width: 768px) {
+    #apresentacao h1 {
+        font-size: 20px;
+    }
+    #apresentacao h2,
+    #apresentacao h2 * {
+        font-size: 55px;
+    }
+}
+
+/* PAGE: BOARD */
+
+#board .theme-color-1 {
+    background-color: #424242 !important;
+}
+
+#board .theme-color-1-text {
+    color: #424242 !important;
+}
+
+/* MAIN */
+
+#main {
+    display: flex;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+#view {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+}
+
+#view > .content >.card {
+    border: 7px solid #666;
+    border-radius: 40px;
+    height: 812px;
+    margin: 0 50px;
+    overflow-x: hidden;
+    width: 375px;
+}
+
+#view ::-webkit-scrollbar {
+    width: 10px;
+}
+
+#view ::-webkit-scrollbar-track {
+    background: transparent;
+    height: 80%;
+}
+
+#view ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+#view ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.header {
+    height: 60px;
+}
+
+.banner {
+    height: 300px;
+}
+
+#input-bar {
+    align-items: center;
+    display: flex;
+}
+
+#input-bar input {
+    border: none;
+    margin: 0;
+}
+
+#input-bar i.material-icons {
+    padding: 0 0 0 20px;
+}

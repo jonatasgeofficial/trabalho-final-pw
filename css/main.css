@@ -1,75 +1,13 @@
 /*
-    1. Base Tags
-    2. Scrollbar
-    3. Themes
-    4. General
+    0. General
+    1. Themes
+    2. Base Tags
+    3. Override
+    4. Scrollbar
     5. Pages
  */
 
-/* 1. Base Tags */
-
-body {
-    background-color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-/* NAVBAR */
-
-#navbar .brand-logo {
-    font-size: 22px !important;
-    padding: 0 20px !important;
-}
-
-#navbar .brand-logo i.material-icons {
-    font-size: 30px !important;
-}
-
-#navbar a.button-collapse {
-    display: block;
-}
-
-/* FOOTER */
-
-footer {
-    bottom: 0;
-    padding: 10px !important;
-    width: 100%;
-}
-
-/* 2. Scrollbar */
-
-/* 3. Themes */
-
-.theme-color-1 {
-    color: white;
-    background-color: #f57c00;
-}
-
-.theme-color-1-text {
-    color: #f57c00 !important;
-}
-
-a.theme-color-1:hover,
-button.theme-color-1:hover,
-input.theme-color-1:hover {
-    background-color: #ffa726;
-}
-
-.theme-color-2 {
-    background-color: #ffffff;
-}
-
-.theme-color-2-text {
-    color: #ffffff !important;
-}
-
-/* 4. General */
+/* 0. General */
 
 *,
 *:before,
@@ -97,6 +35,180 @@ input.theme-color-1:hover {
     margin: 0 !important;
 }
 
+.flex {
+    display: flex !important;
+}
+
+.align-items-center {
+    align-items: center;
+    display: flex !important;
+}
+
+.flex-direction-column {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.justify-content-center {
+    display: flex !important;
+    justify-content: center;
+}
+
+.justify-content-space-between {
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.flex-auto {
+    flex: auto;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.font-size-14,
+.font-size-14 * {
+    font-size: 14px !important;
+}
+
+/* 1. Themes */
+
+:root {
+    --color-1: #f57c00;
+    --color-1-text: #ffffff;
+    --color-1-hover: #ffa726;
+    --color-2: #ffffff;
+    --color-2-text: none;
+    --color-2-hover: none;
+    --color-chat: #ece5dd;
+    --color-chat-human: #dcf8c6;
+    --color-chat-human-text: #000000;
+    --color-chat-machine: #ffffff;
+    --color-chat-machine-text: #000000;
+    --color-nav: #424242;
+}
+
+.theme-color-1 {
+    background-color: var(--color-1);
+    color: var(--color-1-text);
+}
+
+.theme-color-1-text {
+    color: var(--color-1) !important;
+}
+
+a.theme-color-1:hover,
+button.theme-color-1:hover,
+input.theme-color-1:hover,
+a.theme-color-1:focus,
+button.theme-color-1:focus,
+input.theme-color-1:focus {
+    background-color: var(--color-1-hover);
+}
+
+.theme-color-2 {
+    background-color: var(--color-2);
+    color: var(--color-2-text);
+}
+
+.theme-color-2-text {
+    color: var(--color-2) !important;
+}
+
+.theme-color-chat {
+    background-color: var(--color-chat);
+}
+
+.theme-color-nav {
+    background-color: var(--color-nav);
+}
+
+/* 2. Override */
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Thin), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("../fonts/roboto/Roboto-Thin.woff") format("woff");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Light), url("../fonts/roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/roboto/Roboto-Light.woff") format("woff");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Regular), url("../fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/roboto/Roboto-Regular.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Medium), url("../fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/roboto/Roboto-Medium.woff") format("woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Bold), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff");
+    font-weight: 700;
+}
+
+i.left {
+    margin-right: 7px !important;
+}
+
+i.right {
+    margin-left: 7px !important;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: var(--color-1);
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #F1F1F1;
+}
+
+.switch label .lever:before,
+input[type=checkbox]:checked:not(:disabled)~.lever:active::before,
+input[type=checkbox]:checked:not(:disabled).tabbed:focus~.lever::before {
+    background-color: var(--color-1-hover);
+    opacity: 0.15;
+}
+
+/* 3. Base Tags */
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* NAVBAR */
+
+#navbar .brand-logo {
+    font-size: 22px !important;
+    padding: 0 20px !important;
+}
+
+#navbar .brand-logo i.material-icons {
+    font-size: 30px !important;
+}
+
+#navbar a.button-collapse {
+    display: block;
+}
+
+/* 4. Scrollbar */
+
 /* 5. Pages */
 
 /* PAGE: INDEX */
@@ -111,11 +223,7 @@ input.theme-color-1:hover {
 }
 
 #apresentacao>div {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     height: 100%;
-    justify-content: center;
     overflow-y: auto;
     padding: 20px;
     text-align: center;
@@ -127,8 +235,9 @@ input.theme-color-1:hover {
     width: 100%;
 }
 
-#apresentacao h1 {
-    font-size: 32px;
+#apresentacao h1,
+#apresentacao h3 {
+    font-size: 31px;
 }
 
 #apresentacao h2,
@@ -153,14 +262,42 @@ input.theme-color-1:hover {
     }
 }
 
-/* PAGE: BOARD */
+/* PAGE: LOGIN */
 
-#board .theme-color-1 {
-    background-color: #424242 !important;
+/* MAIN */
+
+#page-login main,
+#page-login main>section,
+#page-login main>section>div {
+    height: 100%;
 }
 
-#board .theme-color-1-text {
-    color: #424242 !important;
+#login {
+    background: url(../images/login.jpg) center center no-repeat;
+}
+
+#login .card {
+    width: 300px;
+}
+
+#login .card-reveal .card-title {
+    font-weight: normal;
+}
+
+/* PAGE: BOARD */
+
+#body-content {
+    height: 100%;
+}
+
+#body-content>div {
+    overflow: hidden;
+}
+
+/* NAVBAR */
+
+#view-mode {
+    padding: 0 10px;
 }
 
 /* MAIN */
@@ -172,19 +309,29 @@ input.theme-color-1:hover {
 }
 
 #view {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     justify-content: center;
     margin: auto;
     padding: 20px;
 }
 
-#view > .content >.card {
+#view>.content.mode-computer>.card,
+#view>.content.mode-phone>.card {
     border: 7px solid #666;
-    border-radius: 40px;
-    height: 812px;
     margin: 0 50px;
     overflow-x: hidden;
+}
+
+#view>.content.mode-computer>.card {
+    border-radius: 4px;
+    height: 768px;
+    width: 1024px;
+}
+
+#view>.content.mode-phone>.card {
+    border-radius: 40px;
+    height: 812px;
     width: 375px;
 }
 
@@ -214,6 +361,14 @@ input.theme-color-1:hover {
     height: 300px;
 }
 
+/* ASIDE */
+
+aside {
+    bottom: 0;
+    padding: 0 0 0 5px !important;
+    width: 300px;
+}
+
 #input-bar {
     align-items: center;
     display: flex;
@@ -226,4 +381,18 @@ input.theme-color-1:hover {
 
 #input-bar i.material-icons {
     padding: 0 0 0 20px;
+}
+
+/* TOOLS */
+#tools {
+    padding: 10px;
+}
+
+#tools > * {
+    margin: 0 5px;
+    width: 50px;
+}
+
+#zoom input {
+    margin: 0;
 }

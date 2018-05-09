@@ -16,18 +16,27 @@
     <link type="text/css" rel="stylesheet" href="css/main.css" media="screen,projection" />
 </head>
 
-<body id="board">
+<body id="page-board">
     <!-- NAVBAR -->
-    <nav id="navbar" class="theme-color-1">
+    <nav id="navbar" class="theme-color-nav">
         <div class="nav-wrapper">
             <a href="#" data-activates="side-nav" class="button-collapse">
                 <i class="material-icons">menu</i>
             </a>
 
             <a href="#" class="center brand-logo">
-                <i class="material-icons">mic_none</i>
+                <i class="material-icons">mic</i>
                 <span>Paragon</span>
             </a>
+
+            <div id="view-mode" class="right switch">
+                <label>
+                    <i class="material-icons margin-0 left">phone_iphone</i>
+                    <input type="checkbox">
+                    <span class="lever"></span>
+                    <i class="material-icons margin-0 right">laptop</i>
+                </label>
+            </div>
         </div>
     </nav>
 
@@ -35,7 +44,7 @@
     <ul id="side-nav" class="side-nav">
         <li>
             <div class="user-view">
-                <div class="background theme-color-1"></div>
+                <div class="background theme-color-nav"></div>
                 <img class="circle" src="images/user.jpg">
                 <a href="#!">
                     <span class="white-text name">Jônatas Evangelista</span>
@@ -69,104 +78,121 @@
     </ul>
 
     <!-- MAIN -->
-    <main id="main">
-        <div id="view">
-            <div class="content">
-                <h5 class="center">Página 1</h5>
-                <div class="card">
-                    <div class="header indigo row margin-0"></div>
-                    <div class="banner grey lighten-3 row"></div>
-                    <div class="list row">
-                        <div class="col s12">
-                            <h4 class="indigo-text">Teste</h4>
-                        </div>
-                        <div class="col s12">
-                            <table class="bordered">
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content">
-                <h5 class="center">Página 2</h5>
-                <div class="card">
-                    <div class="header indigo row margin-0"></div>
-                    <div class="banner grey lighten-3 row"></div>
-                    <div class="list row">
-                        <div class="col s12">
-                            <h4 class="indigo-text">Teste</h4>
-                        </div>
-                        <div class="col s12">
-                            <table class="bordered">
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                            </table>
+    <div id="body-content" class="flex">
+        <div class="flex-direction-column flex-auto">
+            <main id="main">
+                <div id="view">
+                    <div class="content mode-phone">
+                        <h5 class="center">Página 1</h5>
+                        <div class="card">
+                            <div class="header indigo row margin-0"></div>
+                            <div class="banner grey lighten-3 row"></div>
+                            <div class="list row">
+                                <div class="col s12">
+                                    <h4 class="indigo-text">Teste</h4>
+                                </div>
+                                <div class="col s12">
+                                    <table class="bordered">
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </main>
 
-    <!-- FOOTER -->
-    <footer class="page-footer theme-color-2">
-        <div class="row margin-0">
-            <!-- INPUT BAR -->
-            <div id="input-bar" class="col s12">
-                <input id="input" class="black-text" type="search" placeholder='Diga algo como "card" ou "header azul"' required>
-                <i class="material-icons theme-color-1-text">mic</i>
+                    <div class="content mode-computer">
+                        <h5 class="center">Página 2</h5>
+                        <div class="card">
+                            <div class="header indigo row margin-0"></div>
+                            <div class="banner grey lighten-3 row"></div>
+                            <div class="list row">
+                                <div class="col s12">
+                                    <h4 class="indigo-text">Teste</h4>
+                                </div>
+                                <div class="col s12">
+                                    <table class="bordered">
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <div id="tools" class="white">
+                <div id="zoom" class="input-field">
+                    <select>
+                        <option value="0.25">25%</option>
+                        <option value="0.5">50%</option>
+                        <option value="0.75">75%</option>
+                        <option value="1" selected>100%</option>
+                    </select>
+                </div>
             </div>
         </div>
-    </footer>
+
+        <aside class="theme-color-2 flex-direction-column">
+            <div id="chat" class="theme-color-chat flex-auto"></div>
+
+            <div class="row margin-0 white-text">
+                <!-- INPUT BAR -->
+                <form id="input-bar" class="col s12">
+                    <input id="input" class="black-text" type="search" placeholder='Digite aqui' required>
+                    <i class="material-icons theme-color-1-text">mic</i>
+                </form>
+            </div>
+        </aside>
+    </div>
 
     <!-- MODAL -->
     <div id="modal1" class="modal">
@@ -183,10 +209,10 @@
     <script type="text/javascript" src="js/vendor/jquery/jquery-3.3.1.min.js"></script>
     <!--Import materialize.js-->
     <script type="text/javascript" src="js/vendor/materialize/materialize.min.js"></script>
-    <!--Import main.js-->
-    <script type="text/javascript" src="js/main.js"></script>
     <!--Import core.js-->
     <script type="text/javascript" src="js/core.js"></script>
+    <!--Import main.js-->
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
